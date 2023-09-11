@@ -1,0 +1,105 @@
+.settings-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: all .5s ease; 
+    backdrop-filter: blur(5px);
+    color: #00A8E8;
+}
+
+.choice-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex: 1;
+    margin: 13px 0;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 40%;
+    min-width: 150px;
+}
+
+.settings-wrapper.active {
+    left: 0;
+}
+
+.settings {
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #fff 1px solid;
+    padding: 13px 0;
+}
+
+.settings label {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.settings label:hover:not(.checked) {
+    color: #53ceff;
+}
+
+.settings input {
+    display: none;
+}
+
+.settings .checked {
+    color: #FFFFFF;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #00A8E8;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 3px;
+}
+
+.close:hover {
+    color: #FFFFFF;
+    transform: scale(1.2);
+}
+
+.board-size {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px), (pointer:none), (pointer:coarse) {
+    .board-size {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        flex: 1;
+        margin: 13px 0;
+    }
+
+    .settings {
+        width: 60%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: #fff 1px solid;
+        padding: 20px 0;
+    }
+
+    .choice-wrapper {
+        font-size: 20px;
+    }
+}

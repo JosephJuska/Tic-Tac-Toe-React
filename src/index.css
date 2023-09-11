@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+a, button, li {
+    border: none;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
