@@ -138,7 +138,7 @@ export function Main(props:any){
             <section className='tictactoe'>
                 <div className="game-wrapper">
                     <div className='buttons'>
-                        <button className='reset-button' onClick={() => resetSquares(squares, setSquares)}><i className="fa-solid fa-arrow-rotate-left"></i></button>
+                        <button className='reset-button' onClick={() => resetSquares(squares, setSquares, setTurn)}><i className="fa-solid fa-arrow-rotate-left"></i></button>
                         <button className='settings-button' onClick={() => setActive(true)}><i className='fa-solid fa-gear'></i></button>
                     </div>
                         <Board className={`board ${grid}`}>
